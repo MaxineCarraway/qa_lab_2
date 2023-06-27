@@ -5,7 +5,7 @@ def calculate_a(b_side, c_side):
     return (c_side**2 - b_side**2 )
 
 def calculate_b(a_side, c_side):
-    return (c_side**x - a_side**2)
+    return (c_side**2 - a_side**2)
 
 def calculate_c(a_side, b_side):
     return (a_side**2 + b_side**2)
