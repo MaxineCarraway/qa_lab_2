@@ -27,12 +27,12 @@ if choice == "1":
 elif choice == "2":
     a_side = float(input("Enter the length of A: "))
     c_side = float(input("Enter the length of C: "))
-    b_side = calculate_b
+    b_side = calculate_b(a_side, c_side)
     print("The length of B is:", b_side)
 elif choice == "3":
     a_side = float(input("Enter the length of A: "))
     b_side = float(input("Enter the length of B: "))
-    c_side = calculate_c
+    c_side = calculate_c(a_side, b_side)
     print("The length of C is:", c_side)
 else:
     print("Invalid choice. Please enter a number from 1 to 3.")
