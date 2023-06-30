@@ -27,7 +27,19 @@ student3 = Student("John", 20, "Class A")
 student4 = Student("Jane", 22, "Class B")
 
 # calculating average test score for student3
-print("Average test score: ",  average_score)
+print("Average test score: ", student3.calculate_average_score)
 
+# Part 3
+class Bird:
+    def __innit__(self, species, colour):
+        self.species = species
+        self.colour = colour
+        
+    def fly(self):
+        print("Flying...")
+        
+# subclass
 
+# class Owl(Bird):
+    
 
