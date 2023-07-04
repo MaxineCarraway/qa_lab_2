@@ -20,4 +20,18 @@ class PasswordCheck():
     has_uppercase = any(char.isupper() for char in password)         
     has_lowercase = any(char.islower() for char in password)         
     has_number = any(char.isdigit() for char in password)         
-    has_special_char = bool(re.search(r"[!@#$%^&*()_+=\-[\]{};':\"\\|,.<>/?]", password))
+    has_special_char = bool(re.search(r"[!@#$%^&*()_+=\-[\]{};':\"\\|,.<>/?]", password))         
+    
+    strength_factors = [length >= 8, has_uppercase, has_lowercase, has_number, has_special_char]         
+    strength_score = sum(strength_factors)         
+    
+    if strength_score == 0:             
+        return "Very Weak"         
+    elif strength_score == 1:             
+        return "Weak"         
+    elif strength_score == 2:             
+        return "Moderate"         
+    elif strength_score == 3:             
+        return "Strong"         
+    else:             
+        return "Very Strong"
